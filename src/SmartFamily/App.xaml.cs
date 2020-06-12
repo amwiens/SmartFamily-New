@@ -1,29 +1,24 @@
-﻿using System;
+﻿using Prism.DryIoc;
+using Prism.Ioc;
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using SmartFamily.Views;
 
 namespace SmartFamily
 {
-    public partial class App : Application
+    public partial class App
     {
-        public App()
+        public App() { }
+
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
             MainPage = new MainPage();
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-        }
 
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
         }
     }
 }
